@@ -17,11 +17,9 @@ def twoSum(nums, target):
         nums_dict[num] = i
 
     for i, num in enumerate(nums, 1):
-        remain  = target - num
+        remain = target - num
         if remain in nums_dict and nums_dict[remain] != i:
             return [i, nums_dict[remain]]
-
-
 
 if __name__ == '__main__':
     print(twoSum([2, 7, 11, 15], 9))
