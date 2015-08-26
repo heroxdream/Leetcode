@@ -12,14 +12,14 @@ def reverseInteger(x):
     sx = sx[::-1]
     xx = int(sign + ''.join(sx))
 
-    if xx > pow(2, 31) - 1:
+    if xx > pow(2, 31) - 1 or xx < -pow(2, 31):
         return 0
     else:
         return xx
 
 def reverseIntegerV2(x):
     xx = (-1 if x < 0 else 1) * int(str(abs(x))[::-1])
-    return 0 if (xx > pow(2, 31) - 1 or xx < -pow(2, 31) - 1) else xx
+    return 0 if (xx > pow(2, 31) - 1 or xx < -pow(2, 31)) else xx
 
 if __name__ == '__main__':
     # print(reverseInteger(-12))
