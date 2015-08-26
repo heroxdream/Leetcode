@@ -172,6 +172,12 @@ def linerLongestPalindromeV6(s):
 
 
 def manacherLongestPalindrome(s):
+    """
+    :param s:
+    :return:
+
+    lots of details and tricks
+    """
 
     t = '#'.join('^{}$'.format(s))
     right = 0
