@@ -3,7 +3,7 @@ __author__ = 'hanxuan'
 def validSudoku(board):
     """
     :param board: List[List[string]]
-    :return: book
+    :return: bool
     Determine if a Sudoku is valid
     """
 
