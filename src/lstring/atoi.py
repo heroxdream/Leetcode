@@ -1,7 +1,7 @@
 __author__ = 'hanxuan'
 def atoi(sx):
     """
-    :param sx: string
+    :param sx: lstring
     :return: int
 
     lots of corner cases:

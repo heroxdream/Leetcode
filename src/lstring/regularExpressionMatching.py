@@ -5,8 +5,8 @@ asterisk = '*'
 
 # def isMatch(text, pattern):
 #     """
-#     :param text: string
-#     :param pattern: string
+#     :param text: lstring
+#     :param pattern: lstring
 #     :return: bool
 #
 #     Some examples:
@@ -54,8 +54,8 @@ asterisk = '*'
 
 def isMatch(text, pattern):
     """
-    :param text: string
-    :param pattern: string
+    :param text: lstring
+    :param pattern: lstring
     :return: bool
 
     Some examples:
@@ -79,8 +79,8 @@ def isMatch(text, pattern):
 def match(text, rules,  match_dic):
 
     '''
-    :param text: string
-    :param rules: List[string]
+    :param text: lstring
+    :param rules: List[lstring]
     :param match_dic: dict
     :return: bool
 

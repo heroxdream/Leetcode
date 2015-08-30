@@ -2,9 +2,9 @@ __author__ = 'hanxuan'
 
 
 """
-    find the longest palindrome of a give string s
-    :param s: string
-    :return: string
+    find the longest palindrome of a give lstring s
+    :param s: lstring
+    :return: lstring
 """
 
 def longestPalindromeV1(s):
@@ -118,16 +118,16 @@ def dplongestPalindromeV5(s):
 
 def linerLongestPalindromeV6(s):
     """
-    string(i,l) is a substring of s where i is the start index and l is the length
+    lstring(i,l) is a substring of s where i is the start index and l is the length
 
     S(n) is the longest palindrome for substring of s with indice from 0 to n
 
-    if S(n-1) = string(i,l)
+    if S(n-1) = lstring(i,l)
 
     then S(n) =
 
-    string(n-l, l+1) if string(n-l, l+1) is palindrome
-    string(n-l-1, l+2) if string(n-l-1, l+2) is palindrome
+    lstring(n-l, l+1) if lstring(n-l, l+1) is palindrome
+    lstring(n-l-1, l+2) if lstring(n-l-1, l+2) is palindrome
     S(n) otherwise
 
     # The key intuition of this algorithm is that palindromes are made up of
@@ -136,7 +136,7 @@ def linerLongestPalindromeV6(s):
     # So, a palindrome of length 100 (for example), will have a palindrome of
     # length 98 inside it, and one of length 96, ... 50, ... 4, and 2.
 
-    # Because of this, we can move across our string, checking if the current
+    # Because of this, we can move across our lstring, checking if the current
     # place is a palindrome of a particular length (the longest length palindrome
     # found so far + 1), and if it is, update the longest length, and move forward.
 
@@ -146,7 +146,7 @@ def linerLongestPalindromeV6(s):
     # Example:
     # "xxABCDCBAio"
     #  0123456789  < indexes
-    # As we scan our string, we initially find a palindrome of length 2 (xx)
+    # As we scan our lstring, we initially find a palindrome of length 2 (xx)
     # We always look backwards!
     # When we get to index 2,3,4, we see no length 3+ palindrome ending there.
     # But when we get to index 6, looking back 3 characters, we see "CDC"! So our
