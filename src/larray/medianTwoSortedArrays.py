@@ -42,7 +42,7 @@ def findKth(long_array, long_pointer, short_array, short_pointer, k):
     if k == 1:
         return min(long_array[long_pointer], short_array[short_pointer])
 
-    # be careful about the short, long array skip len, their sum should be k
+    # be careful about the short, long larray skip len, their sum should be k
     short_array_skip_len = min(int(k / 2), len(short_array) - short_pointer)
     long_array_skip_len = k - short_array_skip_len
 
