@@ -1,6 +1,6 @@
 __author__ = 'hanxuan'
 
-from llinkedList.addTwoNumbers import ListNode
+from llinkedList.ListNode import ListNode
 
 
 def mergeTwoSortedList(l1, l2):
