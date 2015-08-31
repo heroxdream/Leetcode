@@ -34,8 +34,8 @@ class TreeNode(object):
             lnode = TreeNode(a[cp]) if a[cp] != '#' else None
             rnode = TreeNode(a[cp + 1]) if a[cp + 1] != '#' else None
             cp += 2
-            root_list.append(lnode)
-            root_list.append(rnode)
+            root_list.append(lnode) if lnode else 1
+            root_list.append(rnode) if rnode else 1
             while root_list[rp] is None:
                 rp += 1
             curr_root = root_list[rp]
