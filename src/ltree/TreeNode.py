@@ -40,7 +40,6 @@ class TreeNode(object):
                 rp += 1
             curr_root = root_list[rp]
             rp += 1
-            print('rp {}'.format(rp))
             curr_root.left = lnode
             curr_root.right = rnode
 
@@ -59,3 +58,4 @@ if __name__ == '__main__':
     TreeNode.traverse(TreeNode.build_tree_from_array([1, 2, 3, '#', '#', 4, '#', '#', 5]))
     TreeNode.traverse(TreeNode.build_tree_from_array([1]))
     TreeNode.traverse(TreeNode.build_tree_from_array([1, 2, '#']))
+
