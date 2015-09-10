@@ -57,6 +57,8 @@ if __name__ == '__main__':
     n0 = [1, 2, 1]
     n1 = [1, 1, 1]
     n2 = [1, 1, 1, 3]
+    n3 = [1, 2, 3]
     print(permute_unique(n0))
     print(permute_unique(n1))
     print(permute_unique(n2))
+    print(permute_unique(n3))
