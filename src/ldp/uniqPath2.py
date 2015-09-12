@@ -24,7 +24,7 @@ Note: m and n will be at most 100.
 
 def unique_paths_with_obstacles(obstacle_grid):
     """
-    :param obstacleGrid:
+    :param obstacle_grid:
     :return:
     """
     if len(obstacle_grid) == 0 or len(obstacle_grid[0]) == 0:
@@ -34,6 +34,7 @@ def unique_paths_with_obstacles(obstacle_grid):
         return 0
 
     return r(obstacle_grid, 0, 0, {})
+
 
 def r(grid, i, j, d):
     """
