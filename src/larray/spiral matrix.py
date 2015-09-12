@@ -92,7 +92,7 @@ if __name__ == '__main__':
         [1, 2]
     ]
 
-    # print(spiral_order(m0))
-    # print(spiral_order(m1))
-    # print(spiral_order(m2))
+    print(spiral_order(m0))
+    print(spiral_order(m1))
+    print(spiral_order(m2))
     print(spiral_order(m3))
