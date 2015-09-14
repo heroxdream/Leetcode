@@ -23,16 +23,29 @@ def simplify_path(path):
     if not path:
         return ''
 
-    p0 = list(path)
+    p0 = path.split('/')
+    p1 = []
+    for p in p0:
+        if p != '' and p != '.':
+            p1.append(p)
 
-    #   step 1:
-    while p0[-1] is '/':
-        p0.pop()
-
-    p1 = ''.join(p0).split('/')
-    p1.remove('.')
-
+    p2 = []
     for p in p1:
-        if p is '..':
-            p1.pop()
+        if p != '..':
+            p2.append(p)
+        elif p2:
+            p2.pop()
+        else:
+            continue
+    p2.insert(0, '')
 
+    return '/'.join(p2) if len(p2) > 1 else '/'
+
+
+if __name__ == '__main__':
+
+    print(simplify_path('/'))
+    print(simplify_path('/home/'))
+    print(simplify_path('/a/./b/../../c/'))
+    print(simplify_path('/../../../c'))
+    print(simplify_path('/a//b'))
