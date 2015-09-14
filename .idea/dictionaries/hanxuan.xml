@@ -2,6 +2,8 @@
   <dictionary name="hanxuan">
     <words>
       <w>lnode</w>
+      <w>ncol</w>
+      <w>nrow</w>
       <w>pointera</w>
       <w>pointerb</w>
       <w>rnode</w>
