@@ -49,9 +49,23 @@ def recursive_search(nums, start, end, target):
             return recursive_search(nums, start, mid, target)
 
 
+def search_v2(nums, target):
+    """
+    :param nums:
+    :param target:
+    :return:
+    """
+
+    if not nums:
+        return False
+    index = recursive_search(nums, 0, len(nums), target)
+
+    return True if index != -1 else False
+
+
 if __name__ == '__main__':
-    n0 = [4, 5, 6, 7, 0, 1, 2]
+    n0 = [4, 5, 5, 5, 6, 7, 7, 7, 0, 1, 2, 2]
     for n in n0:
-        print('{} {}'.format(n, search(n0, n)))
+        print('{} {}'.format(n, search_v2(n0, n)))
 
     print(search(n0, 3))
