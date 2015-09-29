@@ -17,53 +17,28 @@ def sort_color(nums):
             pointer += 1
             counter[i] -= 1
 
-def sort_color_one_pass(nums):
-    """
-    :param nums:
-    :return:
-    """
-
-    head = 0
-    tail = len(nums) - 1
-    pointer = head + 1
-    while True:
-
-        while nums[head] == 0:
-            head += 1
-            if head >= tail:
-                break
-
-        while nums[tail] == 2:
-            tail -= 1
-            if tail <= head:
-                break
-
-        pointer = max(head + 1, pointer)
-
-        if pointer >= tail:
-            break
-
-        if nums[tail] < nums[head]:
-            swap(nums, tail, head)
-
-        if nums[pointer] < nums[head]:
-            swap(nums, pointer, head)
-        elif nums[pointer] > nums[tail]:
-            swap(nums, pointer, tail)
-
-        pointer += 1
-        print(nums)
-        print(head, pointer, tail)
-
-def swap(a, p, q):
-    t = a[p]
-    a[p] = a[q]
-    a[q] = t
 
 if __name__ == '__main__':
     n0 = [2, 1, 2, 1, 0, 2]
-    # sort_color_one_pass(n0)
+    n1 = [0, 0, 0, 0]
+    n2 = [0, 0, 0, 1]
+    n3 = [0]
+    n4 = []
+    n5 = [1, 0]
+    n6 = [0, 2, 2, 2, 0, 2, 1, 1]
 
-    n1 = [0, 0]
-    sort_color_one_pass(n1)
-    print(n1)
+    # sort_color_one_pass(n0)
+    # sort_color_one_pass(n1)
+    # sort_color_one_pass(n2)
+    # sort_color_one_pass(n3)
+    # sort_color_one_pass(n4)
+    # sort_color_one_pass(n5)
+    sort_color(n6)
+
+    # print(n0)
+    # print(n1)
+    # print(n2)
+    # print(n3)
+    # print(n4)
+    # print(n5)
+    print(n6)
