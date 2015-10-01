@@ -70,3 +70,8 @@ if __name__ == '__main__':
     h5 = ListNode.build_from_array([1, 2, 3, 4, 5, 6, 7])
     h5 = partition(h5, 100)
     h5.traverse()
+
+    h6 = ListNode.build_from_array([3, 1, 2])
+    h6 = partition(h6, 3)
+    h6.traverse()
+
