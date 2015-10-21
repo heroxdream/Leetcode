@@ -21,7 +21,7 @@ def numTrees(n):
     :return:
     """
 
-    return numTreesRecursive(0, n, {})
+    return numTreesRecursive(1, n, {})
 
 
 def numTreesRecursive(startN, endN, d):
@@ -33,13 +33,13 @@ def numTreesRecursive(startN, endN, d):
     if (startN, endN) in d:
         return d[(startN, endN)]
 
-    if endN - startN <= 1:
+    if endN - startN <= 0:
         d[(startN, endN)] = 1
         return d[(startN, endN)]
 
     ans = 0
-    for i in range(startN, endN):
-        ans += numTreesRecursive(startN, i, d) * numTreesRecursive(i + 1, endN, d)
+    for i in range(startN, endN + 1):
+        ans += numTreesRecursive(startN, i - 1, d) * numTreesRecursive(i + 1, endN, d)
     d[(startN, endN)] = ans
 
     return ans
