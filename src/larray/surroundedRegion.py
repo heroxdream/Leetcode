@@ -94,3 +94,12 @@ if __name__ == '__main__':
     ]
     solve(b2)
     print(b2)
+
+    b3 = [
+        ['X', 'X', 'X', 'X'],
+        ['X', 'O', 'O', 'X'],
+        ['X', 'X', 'O', 'X'],
+        ['X', 'O', 'X', 'X']
+    ]
+    solve(b3)
+    print(b3)
