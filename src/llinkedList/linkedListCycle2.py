@@ -14,35 +14,25 @@ Can you solve it without using extra space?
 from llinkedList.ListNode import ListNode
 
 def detectCycle(head):
-    """
-    :param head:
-    :return:
-    """
-    seen = set()
-    while head:
-
-        if head not in seen:
-            seen.add(head)
-            head = head.next
-        else:
-            return head
-    return None
-
-
-def detectCycle_v2(head):
 
     """
     :param head:
     :return:
     """
-
     fast = slow = head
-    while fast and slow:
+    while slow and fast:
         slow = slow.next
         if fast.next:
             fast = fast.next.next
-        if slow == fast:
-            return True
 
-    return False
+        if fast == slow:
+            fast = head
+            while slow != fast:
+                slow = slow.next
+                fast = fast.next
+            return slow
+
+    return None
+
+
 
