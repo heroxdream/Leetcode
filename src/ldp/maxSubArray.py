@@ -34,6 +34,19 @@ def max_sub_array(nums):
         max_ans = max(nums)
     return max_ans
 
+def max_sub_array2(nums):
+
+    if not nums or len(nums) == 0:
+        return 0
+
+    max_local = nums[0]
+    max_global = nums[0]
+    for i in range(1, len(nums)):
+        max_local = max(max_local + nums[i], nums[i])
+        max_global = max(max_local, max_global)
+
+    return max_global
+
 
 import unittest
 
@@ -56,6 +69,15 @@ class TestMaxSubArray(unittest.TestCase):
         self.assertEqual(max_sub_array(self.n4), 7)
         self.assertEqual(max_sub_array(self.n5), 6)
         self.assertEqual(max_sub_array(self.n6), -1)
+
+    def test2(self):
+        self.assertEqual(max_sub_array2(self.n0), 4)
+        self.assertEqual(max_sub_array2(self.n1), -1)
+        self.assertEqual(max_sub_array2(self.n2), 1)
+        self.assertEqual(max_sub_array2(self.n3), 6)
+        self.assertEqual(max_sub_array2(self.n4), 7)
+        self.assertEqual(max_sub_array2(self.n5), 6)
+        self.assertEqual(max_sub_array2(self.n6), -1)
 
 
 if __name__ == '__main__':
