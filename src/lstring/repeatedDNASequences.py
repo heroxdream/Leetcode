@@ -27,9 +27,9 @@ def findRepeatedDnaSequences(s):
         if sub not in d:
             d[sub] = 1
         else:
-            d[sub] +=1
+            d[sub] += 1
 
-    ans= []
+    ans = []
     for s in d:
         if d[s] > 1:
             ans.append(s)
