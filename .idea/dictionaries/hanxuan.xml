@@ -6,6 +6,8 @@
       <w>nrow</w>
       <w>pointera</w>
       <w>pointerb</w>
+      <w>postorder</w>
+      <w>preorder</w>
       <w>rnode</w>
     </words>
   </dictionary>
