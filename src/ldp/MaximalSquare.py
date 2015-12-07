@@ -11,8 +11,6 @@ Return 4.
 """
 
 
-
-
 def maximalSquare(matrix):
     """
     :type matrix: List[List[str]]
