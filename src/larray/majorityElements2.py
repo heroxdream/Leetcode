@@ -14,7 +14,8 @@ def majorityElement(nums):
     :type nums: List[int]
     :rtype: List[int]
     """
-    if not nums: return []
+    if not nums:
+        return []
 
     count1, count2, candidate1, candidate2 = 0, 0, 0, 0
     for n in nums:
@@ -38,4 +39,5 @@ def majorityElement(nums):
     return ans
 
 
-    # return [n for n in set([candidate1, candidate2]) if nums.count(n) > len(nums) // 3]
+if __name__ == '__main__':
+    print(majorityElement([8,8,7,7,7]))
