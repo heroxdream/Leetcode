@@ -25,3 +25,18 @@ def lowestCommonAncestor(root, p, q):
     :type q: TreeNode
     :rtype: TreeNode
     """
+
+    if not root or root == p or root ==q:
+        return root
+
+    left = lowestCommonAncestor(root.left, p, q)
+    right = lowestCommonAncestor(root.right, p, q)
+
+    if left and right:
+        return root
+
+    if left:
+        return left
+
+    if right:
+        return right
