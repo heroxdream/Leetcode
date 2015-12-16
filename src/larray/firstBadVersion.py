@@ -10,6 +10,7 @@ You are given an API bool isBadVersion(version) which will return whether versio
 find the first bad version. You should minimize the number of calls to the API.
 """
 
+
 def isBadVersion(version):
     return False
 
