@@ -28,7 +28,8 @@ def wordPattern(self, pattern, str):
             label += 1
 
     encode1 = []
-    for s in pattern: encode1.append(table1[s])
+    for s in pattern:
+        encode1.append(table1[s])
 
     table2 = {}
     label2 = 0
@@ -37,7 +38,8 @@ def wordPattern(self, pattern, str):
             table2[ss] = label2
             label2 += 1
     encode2 = []
-    for ss in str.split(' '): encode2.append(table2[ss])
+    for ss in str.split(' '):
+        encode2.append(table2[ss])
 
     if len(encode1) != len(encode2):
         return False
