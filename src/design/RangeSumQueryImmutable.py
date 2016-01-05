@@ -19,7 +19,9 @@ class NumArray(object):
         initialize your data structure here.
         :type nums: List[int]
         """
-        if not nums:return
+        if not nums:
+            return
+
         self.nums = nums
         self.sums = [nums[0]] * len(nums)
         for i in range(1, len(nums)):
@@ -33,3 +35,4 @@ class NumArray(object):
         :rtype: int
         """
         return self.sums[j] - self.sums[i] + self.nums[i]
+
