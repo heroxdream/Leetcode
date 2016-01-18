@@ -5,6 +5,7 @@ Reverse a singly linked list.
 
 from llinkedList.ListNode import ListNode
 
+
 def reverseList(head):
     """
     :param head: ListNode
@@ -26,6 +27,7 @@ def reverseList(head):
     head.next = None
 
     return nodes[-1]
+
 
 def reverse_list(head):
     """
