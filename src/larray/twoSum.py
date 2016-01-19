@@ -9,17 +9,13 @@ def twoSum(nums, target):
     :return: List[int]
     """
 
-    print(nums)
-    print(target)
-
-    nums_dict = {}
-    for i, num in enumerate(nums, 1):
-        nums_dict[num] = i
-
-    for i, num in enumerate(nums, 1):
-        remain = target - num
-        if remain in nums_dict and nums_dict[remain] != i:
-            return [i, nums_dict[remain]]
+    table = {}
+    for i in range(len(nums)):
+        if target - nums[i] in table:
+            res = [table[target - nums[i]], i]
+            return res
+        table[nums[i]] = i
+    return [0] * 2
 
 if __name__ == '__main__':
     print(twoSum([2, 7, 11, 15], 9))
